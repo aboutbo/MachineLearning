@@ -17,5 +17,5 @@
 - 样本分成10份，每次9个子样本用来训练，1个子样本用来验证，重复10次。
 
 #### - LogisticRegression模型
-![](MachineLearning/images/LR.png)
-#### - 
+![](file:///MachineLearning/images/LR.png)
+#### -
