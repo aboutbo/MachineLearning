@@ -56,19 +56,19 @@ Confusion matrix混淆矩阵
 F1-score 准确率和召回率的调和值
 AUC ：ROC曲线面积，值越大模型性能越好
 #### - LogisticRegression模型
-![]()
+![](https://github.com/aboutbo/MachineLearning/raw/master/images/LR2.png)
 #### - DecisionTree模型
-![]()
+![](https://github.com/aboutbo/MachineLearning/raw/master/images/DT2.png)
 #### - KNN模型
-![]()
+![](https://github.com/aboutbo/MachineLearning/raw/master/images/KNN2.png)
 #### - NaiveBayes模型
-![]()
+![](https://github.com/aboutbo/MachineLearning/raw/master/images/NB2.png)
 #### - RandomForest模型
-![]()
+![](https://github.com/aboutbo/MachineLearning/raw/master/images/RF2.png)
 #### - SVM模型
-![]()
+![](https://github.com/aboutbo/MachineLearning/raw/master/images/SVM2.png)
 #### - GradientBoosting模型
-![]()
+![](https://github.com/aboutbo/MachineLearning/raw/master/images/GB.png)
 
 ### 6. 效果排序
 - 根据AUC值排序
@@ -79,4 +79,9 @@ GradientBoosting > SVM > LogisticRegression > KNN > RandomForest > DecisionTree 
 
 ### 7. 参数调优
 - 针对RandomForest使用网格搜索方法尝试调优，AUC提高，precision下降，recall提高
-![]()
+![](https://github.com/aboutbo/MachineLearning/raw/master/images/RF3.png)
+
+
+### 8. 总结
+- 数据打标完全依赖与微步IP信誉库，打标结果有问题
+- 特征选择方式有问题，并且没有对特征进行降维
