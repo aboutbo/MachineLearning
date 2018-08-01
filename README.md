@@ -17,5 +17,66 @@
 - 样本分成10份，每次9个子样本用来训练，1个子样本用来验证，重复10次。
 
 #### - LogisticRegression模型
-![](file:///MachineLearning/images/LR.png)
-#### -
+![](https://github.com/aboutbo/MachineLearning/raw/master/images/LR.png)
+#### - DecisionTree模型
+![](https://github.com/aboutbo/MachineLearning/raw/master/images/DT.png)
+#### - KNN模型
+![](https://github.com/aboutbo/MachineLearning/raw/master/images/KNN.png)
+#### - NaiveBayes模型
+![](https://github.com/aboutbo/MachineLearning/raw/master/images/NB.png)
+#### - RandomForest模型
+![](https://github.com/aboutbo/MachineLearning/raw/master/images/RF.png)
+#### - SVM模型
+![](https://github.com/aboutbo/MachineLearning/raw/master/images/SVM.png)
+
+### 6. 总结
+- 缺乏前期对数据的统计分析
+- 没有对数据进行清洗，比如去重，去除异常值
+- 训练模型没有保存
+- 特征处理的方式有待改进
+
+## 对第一次过程进行改进
+### 1. 数据统计
+- 对各个字段的值进行统计，发现一些字段在正负样本中取值无差别，其他一些字段不同取值的比例在
+正负样本中基本相同
+### 2. 数据去重
+- 根据一些字段进行去重
+### 3. 去除异常值
+- 数据统计过程中发现一个全0的异常值
+### 4. 特征构建
+- UA：使用n-gram，包括.和/符号
+- 离散特征改为one-hot编码
+- 连续值进行标准化
+### 5. 模型训练
+- 改变验证方法：验证方法：样本60%为训练样本，40%为测试样本，计算
+Recall rate召回率：TP/(TP+FN)
+Precision rate准确率：TP/(TP+FP)
+Accuracy rate：整体准确率(TP+TN)/ALL
+Confusion matrix混淆矩阵
+F1-score 准确率和召回率的调和值
+AUC ：ROC曲线面积，值越大模型性能越好
+#### - LogisticRegression模型
+![]()
+#### - DecisionTree模型
+![]()
+#### - KNN模型
+![]()
+#### - NaiveBayes模型
+![]()
+#### - RandomForest模型
+![]()
+#### - SVM模型
+![]()
+#### - GradientBoosting模型
+![]()
+
+### 6. 效果排序
+- 根据AUC值排序
+RandomForest > GradientBoosting > KNN > LogisticRegression > DecisionTree > SVM > NaiveBayes
+
+- 根据f1_score排序
+GradientBoosting > SVM > LogisticRegression > KNN > RandomForest > DecisionTree > NaiveBayes
+
+### 7. 参数调优
+- 针对RandomForest使用网格搜索方法尝试调优，AUC提高，precision下降，recall提高
+![]()
